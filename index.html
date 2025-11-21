@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Freno de motor de escape vs Jacobs</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        color-scheme: light dark;
+        font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont,
+          "Segoe UI", sans-serif;
+        font-size: 16px;
+        --bg-color: #f5f7fa;
+        --card-bg: #ffffff;
+        --text-color: #1f2933;
+        --accent: #2563eb;
+        --muted: #6b7280;
+      }
+
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --bg-color: #0f172a;
+          --card-bg: #111827;
+          --text-color: #f8fafc;
+          --muted: #cbd5f5;
+        }
+      }
+
+      body {
+        margin: 0;
+        min-height: 100vh;
+        background: var(--bg-color);
+        color: var(--text-color);
+      }
+
+      .page {
+        max-width: 880px;
+        margin: 0 auto;
+        padding: 64px 24px;
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+      }
+
+      header {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+      }
+
+      header h1 {
+        margin: 0;
+        font-size: clamp(2.25rem, 4vw, 3rem);
+        line-height: 1.1;
+      }
+
+      header p {
+        margin: 0;
+        font-size: 1.1rem;
+        color: var(--muted);
+        max-width: 680px;
+      }
+
+      .comparison {
+        display: grid;
+        gap: 24px;
+      }
+
+      .card {
+        background: var(--card-bg);
+        border-radius: 20px;
+        padding: 24px;
+        box-shadow: 0 20px 45px rgba(15, 23, 42, 0.12);
+        border: 1px solid rgba(148, 163, 184, 0.15);
+      }
+
+      .card h2 {
+        margin: 0 0 16px;
+        font-size: 1.6rem;
+      }
+
+      .card ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: grid;
+        gap: 12px;
+      }
+
+      .card li {
+        display: grid;
+        grid-template-columns: minmax(140px, 220px) 1fr;
+        gap: 8px;
+        align-items: flex-start;
+      }
+
+      .card li span:first-child {
+        font-weight: 600;
+        color: var(--accent);
+        text-transform: uppercase;
+        letter-spacing: 0.04em;
+        font-size: 0.85rem;
+      }
+
+      .card li span:last-child {
+        color: var(--text-color);
+        line-height: 1.55;
+      }
+
+      .callout {
+        background: rgba(37, 99, 235, 0.1);
+        padding: 20px 24px;
+        border-radius: 16px;
+        border-left: 5px solid var(--accent);
+        display: grid;
+        gap: 12px;
+      }
+
+      .callout h3 {
+        margin: 0;
+        font-size: 1.3rem;
+      }
+
+      .callout p {
+        margin: 0;
+        color: var(--muted);
+        line-height: 1.5;
+      }
+
+      .table {
+        overflow: hidden;
+        border-radius: 18px;
+        border: 1px solid rgba(148, 163, 184, 0.25);
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        background: var(--card-bg);
+      }
+
+      th,
+      td {
+        padding: 18px 20px;
+        text-align: left;
+        line-height: 1.5;
+      }
+
+      th {
+        background: rgba(37, 99, 235, 0.1);
+        color: var(--accent);
+        font-size: 0.9rem;
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
+      }
+
+      tr:nth-child(even) {
+        background: rgba(148, 163, 184, 0.12);
+      }
+
+      footer {
+        color: var(--muted);
+        font-size: 0.9rem;
+      }
+
+      footer strong {
+        color: var(--accent);
+      }
+
+      @media (max-width: 720px) {
+        .card {
+          padding: 20px;
+        }
+
+        .card li {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="page">
+      <header>
+        <h1>Freno de motor de escape vs. freno tipo Jacobs</h1>
+        <p>
+          Ambos sistemas ayudan a controlar la velocidad de vehículos pesados en
+          descensos prolongados, pero funcionan de formas distintas y ofrecen
+          niveles de eficacia y complejidad diferentes.
+        </p>
+      </header>
+
+      <section class="comparison">
+        <article class="card">
+          <h2>Freno de motor de escape</h2>
+          <ul>
+            <li>
+              <span>Principio</span>
+              <span>
+                Restricción del flujo de gases en el sistema de escape mediante
+                una válvula tipo mariposa, creando contrapresión y resistencia
+                al pistón durante la carrera de escape.
+              </span>
+            </li>
+            <li>
+              <span>Potencia de frenado</span>
+              <span>
+                Moderada; aporta entre un 30% y 50% de la potencia de frenado
+                que ofrece un freno tipo Jacobs en el mismo motor.
+              </span>
+            </li>
+            <li>
+              <span>Instalación</span>
+              <span>
+                Más simple, se monta en el sistema de escape y requiere ajustes
+                mínimos en el motor.
+              </span>
+            </li>
+            <li>
+              <span>Costos y mantenimiento</span>
+              <span>
+                Menor costo inicial y mantenimiento sencillo; diagnóstico
+                rápido.
+              </span>
+            </li>
+            <li>
+              <span>Aplicaciones típicas</span>
+              <span>
+                Vehículos comerciales ligeros o camiones que circulan en rutas
+                con pendientes moderadas.
+              </span>
+            </li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <h2>Freno de motor tipo Jacobs (Jake Brake)</h2>
+          <ul>
+            <li>
+              <span>Principio</span>
+              <span>
+                Modifica la distribución de válvulas para abrir momentáneamente
+                las válvulas de escape al final de la carrera de compresión,
+                liberando la energía acumulada y convirtiendo el motor en un
+                compresor.
+              </span>
+            </li>
+            <li>
+              <span>Potencia de frenado</span>
+              <span>
+                Muy alta; puede igualar o superar la potencia del sistema de
+                frenos de servicio, aportando hasta un 80% más de capacidad que
+                un freno de escape.
+              </span>
+            </li>
+            <li>
+              <span>Instalación</span>
+              <span>
+                Integrado en la culata o el tren de válvulas; requiere mandos
+                hidráulicos y calibraciones precisas.
+              </span>
+            </li>
+            <li>
+              <span>Costos y mantenimiento</span>
+              <span>
+                Mayor inversión y mantenimiento especializado, pero con amplia
+                durabilidad cuando se usa correctamente.
+              </span>
+            </li>
+            <li>
+              <span>Aplicaciones típicas</span>
+              <span>
+                Camiones de gran tonelaje, autobuses y vehículos que operan en
+                zonas montañosas con descensos prolongados.
+              </span>
+            </li>
+          </ul>
+        </article>
+      </section>
+
+      <section class="card table" aria-labelledby="tabla-comparativa">
+        <table>
+          <thead>
+            <tr>
+              <th id="tabla-comparativa">Aspecto</th>
+              <th>Freno de escape</th>
+              <th>Freno tipo Jacobs</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Modificación del motor</td>
+              <td>Instalación externa en el escape</td>
+              <td>Actuación sobre válvulas y tren de distribución</td>
+            </tr>
+            <tr>
+              <td>Nivel de ruido</td>
+              <td>Bajo a moderado</td>
+              <td>Elevado; genera el característico “freno Jake”</td>
+            </tr>
+            <tr>
+              <td>Respuesta</td>
+              <td>Suave y progresiva</td>
+              <td>Más contundente y rápida</td>
+            </tr>
+            <tr>
+              <td>Dependencia del freno de servicio</td>
+              <td>Reduce desgaste pero requiere apoyo del freno de servicio</td>
+              <td>Puede frenar grandes masas por sí solo durante tramos largos</td>
+            </tr>
+            <tr>
+              <td>Eficiencia en pendientes</td>
+              <td>Adecuado para pendientes medias</td>
+              <td>Óptimo para pendientes pronunciadas y prolongadas</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="callout">
+        <h3>¿Cuál elegir?</h3>
+        <p>
+          Para rutas menos exigentes y presupuestos ajustados, un freno de
+          motor de escape ofrece una mejora clara en el control sin modificar
+          profundamente el motor. Si el vehículo transporta cargas pesadas en
+          pendientes prolongadas, el freno tipo Jacobs proporciona un frenado
+          mucho más potente y seguro, aunque a mayor costo y complejidad.
+        </p>
+      </section>
+
+      <footer>
+        <strong>Dato clave:</strong> ambos sistemas se usan como complemento,
+        no sustituyen al freno de servicio principal.
+      </footer>
+    </main>
+  </body>
+</html>
